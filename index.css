@@ -1,0 +1,39 @@
+.small-title-font{
+  color: white;
+  padding-top: 1.5em;
+  text-align: left;
+}
+
+.title-font{
+  color: white;
+  text-align: left;
+  padding-right: 2em;
+  word-spacing: .2em;
+  line-height: 1.5em;
+}
+
+.title-font-right{
+  color: white;
+  text-align: right;
+  padding-right: 2em;
+  word-spacing: .2em;
+  line-height: 1.5em;
+}
+
+.text-container{
+  padding-right: 2em;
+}
+
+.main-img{
+  float: left;
+  padding-top: 2em;
+  padding-left: 1.5em;
+  padding-right: 6em;
+  max-width: 50%;
+  height: auto;
+}
+
+.arrow{
+  text-align: right;
+  color: white;
+}
