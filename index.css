@@ -72,6 +72,13 @@
   padding: 3em;
 }
 
+.two-column-static {
+  position: relative;
+  float: left;
+  width: 50%;
+  padding: 3em;
+}
+
 /* Clear floats after image containers */
 .row::after {
   content: "";
@@ -149,4 +156,8 @@
 
 .logo-title {
   text-align: center;
+}
+
+a {
+  color: black;
 }
