@@ -65,6 +65,13 @@
   padding: 3em;
 }
 
+.three-column-static {
+  position: relative;
+  float: left;
+  width: 33.33%;
+  padding: 3em;
+}
+
 /* Clear floats after image containers */
 .row::after {
   content: "";
@@ -78,6 +85,14 @@
   width: 100%;
   height: auto;
   transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.logo-full {
+  opacity: 1;
+  display: block;
+  max-width: 100%;
+  height: auto;
   backface-visibility: hidden;
 }
 
