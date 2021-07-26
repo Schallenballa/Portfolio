@@ -5,7 +5,7 @@ window.onload = function() {
     )
     .then(response => {
       response.json().then(json => {
-        document.getElementById('fetchDate').innerHTML = "© Last Updated - " + json.commit.commit.author.date.slice(0,10) + " @ " + json.commit.commit.author.date.slice(11,16);
+        document.getElementById('fetchDate').innerHTML = "Zachary Schallenberger © Last Updated - " + json.commit.commit.author.date.slice(0,10) + " @ " + json.commit.commit.author.date.slice(11,16);
       });
     })
     .catch(error => {
