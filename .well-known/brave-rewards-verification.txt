@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: zacharyschallenberger.com
+Token: 1ead33c623a5ca494e44f4eb98cfdc31e570148ae9780a6a0f57b3a78fc10b4b
