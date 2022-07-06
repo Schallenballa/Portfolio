@@ -5498,10 +5498,6 @@ html.is-reveal-open {
 
 @media print, screen and (max-width: 39.99875em) {
   .hide-for-small-only {
-    display: none !important; }
-    img{
-      width: 100% !important;
-    }
   }
 
 @media screen and (max-width: 0em), screen and (min-width: 40em) {
