@@ -5,7 +5,8 @@ window.onload = function() {
     )
     .then(response => {
       response.json().then(json => {
-        sanitizeHTML("Zachary Schallenberger © Last Updated - " + json.commit.commit.author.date.slice(0,10) + " @ " + json.commit.commit.author.date.slice(11,16));
+        var stringParam = "Zachary Schallenberger © Last Updated - " + json.commit.commit.author.date.slice(0,10) + " @ " + json.commit.commit.author.date.slice(11,16);
+        sanitizeHTML(stringParam);
       });
     })
     .catch(error => {
