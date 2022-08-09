@@ -6,6 +6,7 @@ images/.DS_Store
 .env
 .DS_Store
 .DS_Store
+node_modules
 
 # Local Netlify folder
 .netlify
