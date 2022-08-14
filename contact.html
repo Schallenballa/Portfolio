@@ -21,6 +21,7 @@
   <title>Zachary Schallenberger</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/foundation.css">
+  <link rel="stylesheet" href="assets/css/index.css">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
@@ -75,7 +76,7 @@
       </div>
     </div>
   </nav>
-  <div class="grid-container" style="padding: 12rem;">
+  <div class="grid-container" style="padding: 6rem;">
     <div class="grid-x grid-margin-x small-up-2">
       <div class="cell">
         <h4 class="small-title-font"><em>Contact</em></h4>
@@ -87,10 +88,28 @@
     <br>
     <div class="grid-x grid-margin-x small-up-1">
       <div class="cell">
-        <h3 class="title-font"><b>Email: <a href="mailto:zapps98@gmail.com" style="text-decoration: none; color: #fefefe"><u>zapps98@gmail.com</u></a></b></h3>
-        <br>
-        <h3>LinkedIn:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://www.linkedin.com/in/zacharyschallenberger/" target="_blank"><img class="thumbnail" src="/images/linkedin.png" alt="LinkedIn logo" style="width: 10%;"></a></h3>
-        <h3>GitHub:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://github.com/Schallenballa" target="_blank"><img class="thumbnail" src="/images/github_logo.png" alt="Github logo" style="width: 10%; border-radius: 5px;"></h3>
+        <div class="form">
+          <h1 style="color: #0a0a0a">Contact Form</h1>
+          <form name="contact" method="POST" data-netlify="true">
+            <p>
+              <label>Name: <input type="text" name="name" /></label>
+            </p>
+            <p>
+              <label>Email: <input type="email" name="email" /></label>
+            </p>
+            <p>
+              <label>Message: <textarea name="message"></textarea></label>
+            </p>
+            <p>
+              <button class="button primary" type="submit">Submit</button>
+            </p>
+          </form>
+        </div>
+      </div>
+      <br>
+      <div class="grid-x grid-margin-x small-up-2">
+        <h3 style="padding: 2rem;">LinkedIn:<a href="https://www.linkedin.com/in/zacharyschallenberger/" target="_blank"><img class="thumbnail" src="/images/linkedin.png" alt="LinkedIn logo" style="width: 125px; padding: 2rem;"></a></h3>
+        <h3 style="padding: 2rem;">GitHub:<a href="https://github.com/Schallenballa" target="_blank"><img class="thumbnail" src="/images/github_logo.png" alt="Github logo" style="width: 125px; padding: 2rem;"></h3>
       </div>
     </div>
     <br>
@@ -113,4 +132,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   <script src="index.js"></script>
 </body>
+
 </html>
