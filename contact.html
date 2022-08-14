@@ -97,18 +97,18 @@
               </label>
             </p>
             <p>
-              <label>Name: <input type="text" name="name" /></label>
+              <label>Name: <input type="text" name="name" required/></label>
             </p>
             <p>
-              <label>Email: <input type="email" name="email" /></label>
+              <label>Email: <input type="email" name="email" required/></label>
             </p>
             <p>
               <label>Message: <textarea name="message"></textarea></label>
             </p>
+            <div data-netlify-recaptcha="true"></div>
             <p>
               <button class="button primary" type="submit">Submit</button>
             </p>
-            <div data-netlify-recaptcha="true"></div>
           </form>
         </div>
       </div>
