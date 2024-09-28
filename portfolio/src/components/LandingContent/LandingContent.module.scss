@@ -1,0 +1,36 @@
+.container{
+  display: flex;
+}
+
+.helloContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  font-family: "Goudy Old Style", HGaramond, "Big Caslon", "Times New Roman", serif;
+}
+
+.mainImg {
+  -webkit-filter: grayscale(100%);
+  border-radius: 100vw;
+  width: 34vw;
+  height: 34vw;
+  transition: ease-out 0.3s;
+  animation: fadeIn ease-out 1s;
+  &:hover {
+    -webkit-filter: grayscale(0%);
+    height: 35vw;
+    width: 35vw;
+    border-radius: 100vw;
+  }
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0%;}
+  100% {opacity: 100%}
+}
+
+.sectionContainer {
+  display: flex;
+  justify-content: center;
+}
