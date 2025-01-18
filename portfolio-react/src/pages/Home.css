@@ -1,0 +1,89 @@
+.home-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #f5f5f5;
+}
+
+.home-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.projects-section {
+    margin-top: 20px;
+}
+
+/* About.css */
+.about-container {
+    padding: 40px;
+    background-color: #ffffff;
+    color: #333;
+    max-width: 800px;
+    margin: auto;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%; /* Full width */
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Take 80% of the container width */
+    flex-wrap: wrap; /* Allow logos to wrap on small screens */
+    gap: 20px; /* Space between logos */
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-width: 100%; /* Make sure the logo doesn't exceed its container */
+    margin: 0 auto; /* Center the logos */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+    opacity: 0.8; /* Slight opacity change for effect */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .logo-container {
+        width: 100%; /* Full width on small screens */
+        justify-content: center; /* Center logos */
+    }
+
+    .logo {
+        width: 80px; /* Smaller logos on mobile */
+        height: 80px;
+    }
+
+    .box {
+        padding: 10px; /* Reduce padding on mobile */
+    }
+}
+
+/* Extra Mobile Styles */
+@media (max-width: 480px) {
+    .logo {
+        width: 60px; /* Even smaller logos for very small screens */
+        height: 60px;
+    }
+
+    .box {
+        padding: 5px; /* Further reduce padding */
+    }
+}

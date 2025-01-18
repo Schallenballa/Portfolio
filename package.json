@@ -2,6 +2,7 @@
   "dependencies": {
     "jquery": "^3.7.1",
     "js-library-detector": "^6.7.0",
-    "netlify-plugin-csp-generator": "^1.6.1"
+    "netlify-plugin-csp-generator": "^1.6.1",
+    "react-router-dom": "^6.28.2"
   }
 }
