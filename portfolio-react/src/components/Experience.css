@@ -1,0 +1,32 @@
+.experience {
+    margin-top: 20px;
+}
+
+.job {
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.job h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.job p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.job ul {
+    margin-top: 10px;
+}
+
+.job ul li {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}

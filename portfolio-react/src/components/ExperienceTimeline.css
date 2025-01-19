@@ -1,0 +1,43 @@
+.experience-timeline {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+ul li {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Customize the Timeline dot */
+.MuiTimelineDot-root {
+    padding: 0;
+}
+
+.MuiTimelineDot-colorPrimary {
+    background-color: #1DB954; /* Spotify Green */
+}
+
+.MuiTimelineDot-colorSecondary {
+    background-color: #0077b5; /* LinkedIn Blue */
+}

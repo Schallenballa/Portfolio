@@ -1,0 +1,61 @@
+.header {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    border-radius: 8px;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #555;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.icon.github:hover {
+    color: #333;
+}
+
+.icon.linkedin:hover {
+    color: #0077b5;
+}
+
+.icon.twitter:hover {
+    color: #1da1f2;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
