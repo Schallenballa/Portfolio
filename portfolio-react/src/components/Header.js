@@ -1,26 +1,30 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import {Link, useLocation} from 'react-router-dom';
 
 const Header = () => {
+    const location = useLocation();
+    const [activeLink, setActiveLink] = useState("home");
+
+    useEffect(() => {
+        if (location.pathname === "/Zapps") {
+            setActiveLink("music");
+        } else {
+            setActiveLink("home");
+        }
+    }, [location.pathname]);
+
     return (
         <header className="header">
             <h1 id={"headerName"}>Zachary Schallenberger</h1>
             <p id={"title"}>Software Engineer</p>
             <div className="navigation">
-                <Link to="/">Home</Link>
-                <Link to="/Zapps">Music</Link> {/* New link to the Music page */}
-            </div>
-            <div className="social-icons">
-                <a href="https://github.com" className="icon github" target="_blank" rel="noopener noreferrer">
-                    {/*<FaGithub />*/}
-                </a>
-                <a href="https://www.linkedin.com/in/zacharyschallenberger" className="icon linkedin" target="_blank" rel="noopener noreferrer">
-                    {/*<FaLinkedin />*/}
-                </a>
-                <a href="https://twitter.com" className="icon twitter" target="_blank" rel="noopener noreferrer">
-                    {/*<FaTwitter />*/}
-                </a>
+                {activeLink !== "home" && (
+                    <Link to="/" onClick={() => setActiveLink("home")}>Home</Link>
+                )}
+                {activeLink !== "music" && (
+                    <Link to="/Zapps" onClick={() => setActiveLink("music")}>Music</Link>
+                )}
             </div>
         </header>
     );
