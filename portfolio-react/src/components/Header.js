@@ -20,10 +20,18 @@ const Header = () => {
             <p id={"title"}>Software Engineer</p>
             <div className="navigation">
                 {activeLink !== "home" && (
-                    <Link to="/" onClick={() => setActiveLink("home")}>Home</Link>
+                    <Link to="/">
+                        <button className="portfolio-button" onClick={() => setActiveLink("home")}>
+                            <span className="portfolio-text">💼 Professional Portfolio 💻</span>
+                        </button>
+                    </Link>
                 )}
                 {activeLink !== "music" && (
-                    <Link to="/Zapps" onClick={() => setActiveLink("music")}>Music</Link>
+                    <Link to="/Zapps">
+                        <button className="music-button" onClick={() => setActiveLink("music")}>
+                            <span className="music-text" >🎵 Explore My Music 🎶</span>
+                        </button>
+                    </Link>
                 )}
             </div>
         </header>
