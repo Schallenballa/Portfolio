@@ -6,20 +6,23 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
-import Music from './components/Music'; // Import the new Music component
+import Music from './components/Music';
+import {ParallaxProvider} from "react-scroll-parallax"; // Import the new Music component
 
 function App() {
     return (
-        <Router>
-            <div className="App">
-                <Header />
-                <Routes>  {/* Updated to Routes */}
-                    <Route path="/" element={<><Experience /><Education /><Skills /></>} />  {/* Updated route */}
-                    <Route path="/Zapps" element={<Music />} />  {/* Updated route */}
-                </Routes>
-                <Footer />
-            </div>
-        </Router>
+        <ParallaxProvider>
+            <Router>
+                <div className="App">
+                    <Header />
+                    <Routes>  {/* Updated to Routes */}
+                        <Route path="/" element={<><Experience /><Education /><Skills /></>} />  {/* Updated route */}
+                        <Route path="/Zapps" element={<Music />} />  {/* Updated route */}
+                    </Routes>
+                    <Footer />
+                </div>
+            </Router>
+        </ParallaxProvider>
     );
 }
 

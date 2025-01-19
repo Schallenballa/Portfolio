@@ -35,7 +35,7 @@
 }
 
 .music-link:hover {
-    background-color: #1ed760;
+    background-color: #13893c;
 }
 
 .music-link span {
@@ -43,7 +43,8 @@
 }
 
 .spotify-logo,
-.apple-logo {
+.apple-logo,
+.yt-logo{
     width: 30px;
     height: auto;
 }
@@ -53,5 +54,14 @@
 }
 
 .apple-music:hover {
-    background-color: #333;
+    background-color: rgb(163, 45, 50);
+}
+
+.yt-music {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.yt-music:hover {
+    background-color: #d3d3d3;
 }
