@@ -66,3 +66,7 @@
 .yt-music:hover {
     background-color: #d3d3d3;
 }
+
+.skeleton-loading {
+    height: 988px;
+}
