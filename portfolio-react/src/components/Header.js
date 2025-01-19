@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <header className="header">
-            <h1>Zachary Schallenberger</h1>
-            <p>Software Engineer | Music Producer</p>
+            <h1 id={"headerName"}>Zachary Schallenberger</h1>
+            <p id={"title"}>Software Engineer</p>
             <div className="navigation">
                 <Link to="/">Home</Link>
                 <Link to="/Zapps">Music</Link> {/* New link to the Music page */}

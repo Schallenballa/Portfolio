@@ -1,11 +1,11 @@
 .App {
   font-family: 'Arial', sans-serif;
-  margin: 20px;
+  padding: 0 30px;
   max-width: 900px;
   margin: 0 auto;
   background: linear-gradient(135deg, #f0f4f8, #e1e8ee);
   border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 section {
