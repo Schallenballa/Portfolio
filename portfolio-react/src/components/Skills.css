@@ -1,0 +1,18 @@
+.skills {
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.skills ul {
+    margin-top: 10px;
+}
+
+.skills ul li {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}

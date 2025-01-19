@@ -1,0 +1,72 @@
+.music {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.music h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.music p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.music-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.music-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1DB954;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.music-link:hover {
+    background-color: #13893c;
+}
+
+.music-link span {
+    margin-left: 10px;
+}
+
+.spotify-logo,
+.apple-logo,
+.yt-logo{
+    width: 30px;
+    height: auto;
+}
+
+.apple-music {
+    background-color: rgb(230,62,68);
+}
+
+.apple-music:hover {
+    background-color: rgb(163, 45, 50);
+}
+
+.yt-music {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.yt-music:hover {
+    background-color: #d3d3d3;
+}
+
+.skeleton-loading {
+    height: 988px;
+}
