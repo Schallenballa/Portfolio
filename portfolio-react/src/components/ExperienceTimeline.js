@@ -10,14 +10,12 @@ import {
 } from '@mui/lab';
 import './ExperienceTimeline.css';
 import FordLogo from "../assets/icons/FordLogo";
-import {Box, Button, Modal, Typography} from "@mui/material";
 import BMWLogo from "../assets/icons/BMWLogo";
 import FreatsLogo from "../assets/icons/FreatsLogo";
 import TylerTechLogo from "../assets/icons/TylerTechLogo";
 import NSFLogo from "../assets/icons/NSFLogo";
 
 const ExperienceTimeline = () => {
-    const [isModalOpen, setIsModalOpen] = React.useState(false);
     const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
 
     React.useEffect(() => {

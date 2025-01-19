@@ -2,7 +2,7 @@ import React from "react";
 
 const FeaturedTrackPlayer = ({ src, width, height }) => (
     <iframe src={src} width={width} height={height} frameBorder={"0"} allowFullScreen={""} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy" style={{padding: "20px 0"}}></iframe>
+            loading="lazy" style={{padding: "20px 0"}} title={"Featured Track"}></iframe>
 );
 
 export default FeaturedTrackPlayer;
