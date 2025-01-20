@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio_react=self.webpackChunkportfolio_react||[]).push([[324],{324:(e,r,t)=>{t.r(r),t.d(r,{default:()=>i});t(43);var a=t(579);const i=e=>{let{src:r,width:t,height:i}=e;return(0,a.jsx)("iframe",{src:r,width:t,height:i,frameBorder:"0",allow:"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",loading:"lazy",style:{padding:"20px 0"},title:"Standard Track Player"})}}}]);
+//# sourceMappingURL=324.5b5aaa40.chunk.js.map
