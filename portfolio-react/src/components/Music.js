@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import loadable from "@loadable/component";
+import React, { useEffect, useState } from 'react';
+import { Skeleton } from '@mui/material';
+import loadable from '@loadable/component';
 import './Music.css';
 
 const Music = () => {
-    const [ready, setReady] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
 
+    // Handle background color transitions and header updates
     useEffect(() => {
         const fadeIn = () => {
             document.body.style.transition = 'background-color 0.5s ease-out';
@@ -16,33 +18,55 @@ const Music = () => {
             document.body.style.backgroundColor = ''; // Reset background color
         };
 
-        document.getElementById('headerName').innerHTML = 'Zapps';
-        document.getElementById('title').innerHTML = 'Music Producer';
+        // Update header elements
+        const headerName = document.getElementById('headerName');
+        const title = document.getElementById('title');
+        if (headerName) headerName.innerHTML = 'Zapps';
+        if (title) title.innerHTML = 'Music Producer';
 
         fadeIn();
 
-        setTimeout(() => {
-            setReady(true)
-        }, 1000);
+        // Set loading to false after a simulated delay (or based on asset loads)
+        const timer = setTimeout(() => setIsLoading(false), 1000);
 
         return () => {
             fadeOut();
-            document.getElementById('headerName').innerHTML = 'Zachary Schallenberger';
-            document.getElementById('title').innerHTML = 'Software Engineer';
+            if (headerName) headerName.innerHTML = 'Zachary Schallenberger';
+            if (title) title.innerHTML = 'Software Engineer';
+            clearTimeout(timer);
         };
     }, []);
 
-    const FeaturedTrack = loadable(() => import("./FeaturedTrackPlayer"), {
-        fallback: <div>Loading...</div>
+    // Lazy load components for music tracks
+    const FeaturedTrack = loadable(() => import('./FeaturedTrackPlayer'), {
+        fallback: <Skeleton variant="rectangular" width="100%" height={352} />,
     });
 
-    const StandardTrack = loadable(() => import("./StandardTrackPlayer"), {
-        fallback: <div>Loading...</div>
-    })
+    const StandardTrack = loadable(() => import('./StandardTrackPlayer'), {
+        fallback: <Skeleton variant="rectangular" width="100%" height={152} />,
+    });
 
     return (
         <>
-            {ready ? (
+            {isLoading ? (
+                <section className="skeleton-loading">
+                    {/* Skeletons for the header */}
+                    <Skeleton variant="text" width={200} height={40} />
+                    <Skeleton variant="text" width={150} height={25} />
+                    {/* Skeletons for music links */}
+                    <div className="music-links">
+                        {[...Array(3)].map((_, index) => (
+                            <Skeleton key={index} variant="rectangular" width={150} height={50} />
+                        ))}
+                    </div>
+                    {/* Skeleton for featured track */}
+                    <Skeleton variant="rectangular" width="100%" height={352} />
+                    {/* Skeletons for standard tracks */}
+                    {[...Array(2)].map((_, index) => (
+                        <Skeleton key={index} variant="rectangular" width="100%" height={152} />
+                    ))}
+                </section>
+            ) : (
                 <section className="music">
                     <h2>Listen to Zapps</h2>
                     <p>Check out my latest tracks on all streaming platforms!</p>
@@ -51,12 +75,9 @@ const Music = () => {
                             href="https://open.spotify.com/artist/5bVFcbuGnbVAstKk9iUWyK?si=Dm_syrdFSVK2ppYwOtgWTQ"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="music-link spotify">
-                            <img
-                                src="/images/spotify.png"
-                                alt="Spotify Logo"
-                                className="spotify-logo"
-                            />
+                            className="music-link spotify"
+                        >
+                            <img src="/images/spotify.png" alt="Spotify Logo" className="spotify-logo" />
                             <span>Spotify</span>
                         </a>
 
@@ -64,12 +85,9 @@ const Music = () => {
                             href="https://music.apple.com/us/artist/zapps/1684547283"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="music-link apple-music">
-                            <img
-                                src="/images/apple-music.png"
-                                alt="Apple Music Logo"
-                                className="apple-logo"
-                            />
+                            className="music-link apple-music"
+                        >
+                            <img src="/images/apple-music.png" alt="Apple Music Logo" className="apple-logo" />
                             <span>Apple Music</span>
                         </a>
 
@@ -79,17 +97,12 @@ const Music = () => {
                             rel="noopener noreferrer"
                             className="music-link yt-music"
                         >
-                            <img
-                                src="/images/youtube-music.png"
-                                alt="YouTube Music Logo"
-                                className="yt-logo"
-                            />
+                            <img src="/images/youtube-music.png" alt="YouTube Music Logo" className="yt-logo" />
                             <span>YouTube Music</span>
                         </a>
-
                     </div>
-                    <hr/>
-                    <div className="music-links" style={{paddingBottom: '20px'}}>
+                    <hr />
+                    <div className="music-links" style={{ paddingBottom: '20px' }}>
                         <div>
                             <h2>Latest Single</h2>
                             <p><em>One More Last Time</em></p>
@@ -97,27 +110,25 @@ const Music = () => {
                         </div>
                         <div>
                             <FeaturedTrack
-                                src={ready ? "https://open.spotify.com/embed/track/5YIEEFt6YnsiKRblUREDwo?utm_source=generator" : "about:blank"}
-                                width="100%" height="352"/>
+                                src="https://open.spotify.com/embed/track/5YIEEFt6YnsiKRblUREDwo?utm_source=generator"
+                                width="100%" height="352"
+                            />
                         </div>
                     </div>
-                    <div className={"music-links"}>
+                    <div className="music-links">
                         <h2>Tracks</h2>
                         <div>
                             <StandardTrack
-                                src={ready ? "https://open.spotify.com/embed/track/6DEnpiC9VO3rNFHyls0Kzi?utm_source=generator" : "about:blank"}
-                                width={"100%"} height={"152"}/>
+                                src="https://open.spotify.com/embed/track/6DEnpiC9VO3rNFHyls0Kzi?utm_source=generator"
+                                width="100%" height="152"
+                            />
                             <StandardTrack
-                                src={ready ? "https://open.spotify.com/embed/track/1PP9GQZVhl7Rap8aOP1r5e?utm_source=generator" : "about:blank"}
-                                width={"100%"} height={"152"}/>
+                                src="https://open.spotify.com/embed/track/1PP9GQZVhl7Rap8aOP1r5e?utm_source=generator"
+                                width="100%" height="152"
+                            />
                         </div>
                     </div>
                 </section>
-            ) : (
-                <div className="skeleton-loading">
-                    <div className="skeleton skeleton-header"></div>
-                    <div className="skeleton skeleton-body"></div>
-                </div>
             )}
         </>
     );
