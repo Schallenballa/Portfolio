@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkportfolio_react=self.webpackChunkportfolio_react||[]).push([[549],{549:(e,r,t)=>{t.r(r),t.d(r,{default:()=>a});t(43);var l=t(579);const a=e=>{let{src:r,width:t,height:a}=e;return(0,l.jsx)("iframe",{src:r,width:t,height:a,frameBorder:"0",allowFullScreen:"",allow:"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",loading:"lazy",style:{padding:"20px 0"},title:"Featured Track"})}}}]);
-//# sourceMappingURL=549.dd5e2602.chunk.js.map
