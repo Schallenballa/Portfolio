@@ -1,9 +1,2 @@
 /*
-  Content-Security-Policy:
-    default-src 'self';
-    script-src 'self';
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' data: https://media.licdn.com https://www.tylertech.com https://mediapool.bmwgroup.com https://lp-auto-assets.s3.amazonaws.com https://upload.wikimedia.org https://www.montana.edu;
-    font-src 'self' data:;
-    connect-src 'self';
-    frame-src 'self' https://www.linkedin.com https://platform.linkedin.com https://open.spotify.com https://spotify.com;
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://media.licdn.com https://www.tylertech.com https://mediapool.bmwgroup.com https://lp-auto-assets.s3.amazonaws.com https://upload.wikimedia.org https://www.montana.edu; font-src 'self' data:; connect-src 'self'; frame-src 'self' https://www.linkedin.com https://platform.linkedin.com https://open.spotify.com https://spotify.com;
