@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Music from './components/Music';
 import HomePage from "./components/HomePage";
+import {Navigate} from "react-router";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/Zapps" element={<Music />} />
+                    <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
             </div>
         </Router>
