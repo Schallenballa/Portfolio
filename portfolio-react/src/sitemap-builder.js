@@ -9,4 +9,4 @@ const Sitemap = require('react-router-sitemap').default;
 
 new Sitemap(router)
     .build('https://zacharyschallenberger.com')
-    .save('./sitemap.xml');
+    .save('../public/sitemap.xml');
