@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Skeleton } from '@mui/material';
 import loadable from '@loadable/component';
 import './Music.css';
+import {Helmet} from "react-helmet";
 
 const Music = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -48,6 +49,13 @@ const Music = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Zapps</title>
+                <meta property="og:title" content="Zapps" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={'https://www.zacharyschallenberger.com/Zapps'} />
+                <meta property="og:description" content="In an industry dominated by high-energy beats and dance floor anthems, Zapps' devotion to downtempo electronic music and his capacity to conjure evocative, emotive soundscapes are a breath of fresh air. His music is a reminder that in the heart of the city, one can find tranquility, and in the midst of chaos, serenity can be uncovered." />
+            </Helmet>
             {isLoading ? (
                 <section className="skeleton-loading">
                     {/* Skeletons for the header */}

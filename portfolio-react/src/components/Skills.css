@@ -1,10 +1,11 @@
 .skills {
     margin-top: 20px;
-    background: #fff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) -100%, #fff) no-repeat center / auto, url('../../public/images/zach_schallenberger_og.png') no-repeat center;
+    background-position-x: 30%;
 }
 
 .skills ul {
