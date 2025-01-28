@@ -55,7 +55,7 @@ const Education = () => {
                     >
                         <img
                             src={
-                                "https://media.licdn.com/dms/image/v2/C562DAQF1lXi8WFJ_nQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1646886308256?e=1737932400&v=beta&t=Ylb4PL6z1H36Xel5WnOTYBEUYnoyBJ1bMHsBdWR-OHo"
+                                "/images/diploma.jpeg"
                             }
                             alt="MSU Diploma"
                             className={`image ${expanded ? "clear" : "blurred"}`}

@@ -41,7 +41,7 @@ const ExperienceTimeline = () => {
                         color="text.secondary"
                     >
                         <img
-                            src="https://media.licdn.com/dms/image/v2/D562DAQF6reMur4VcFA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1701449746130?e=1737921600&v=beta&t=EmAhHjXSza2wDNPYaw_930Id8KT8bBOs1ZIDv6t08s4"
+                            src="/images/award.jpeg"
                             alt="award" width="100%" height="auto" style={{borderRadius: '20px', padding: '10px 0'}}/>
                         <img src={"https://media.licdn.com/dms/image/v2/D5622AQF38Fd8Z2mNQw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1712870368493?e=1740009600&v=beta&t=8GCe59fBMGxZG6snHhvwmCwNZPmKMjEUEbkbkjagEvA"}
                              alt={"Zach Schallenberger with Ford Ranger Raptor"} width={"100%"} height={"auto"} style={{borderRadius: '20px', padding: '10px 0'}}/>
