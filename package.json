@@ -42,6 +42,22 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/**/*.test.{js,jsx}",
+      "!src/index.js",
+      "!/vanilla-site/**",
+      "!/src/assets/icons/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ]
+  },
   "overrides": {
     "nth-check": "^2.0.1",
     "postcss": "^8.4.31"
@@ -51,10 +67,14 @@
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
     "@babel/register": "^7.25.9",
+    "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-jest": "^28.11.0",
     "ignore-styles": "^5.0.1",
+    "jest": "^27.5.1",
     "web-vitals": "^4.2.4",
     "webpack-bundle-analyzer": "^4.10.2"
   }

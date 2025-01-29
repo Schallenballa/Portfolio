@@ -11,5 +11,6 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="page-embed" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="@types/jest" level="application" />
   </component>
 </module>

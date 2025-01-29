@@ -4,7 +4,7 @@ const TylerTechLogo = () => {
     return (
         <img
             src={'./images/tyler-tech.png'}
-            alt="Ford Logo"
+            alt="Tyler Technologies Logo"
             style={{width: '100px', height: 'auto'}}
         />
     );
