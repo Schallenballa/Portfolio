@@ -5,6 +5,10 @@ on:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
+    
+env:
+  ACTIONS_STEP_DEBUG: true
+
 jobs:
   sonarqube:
     name: SonarQube
