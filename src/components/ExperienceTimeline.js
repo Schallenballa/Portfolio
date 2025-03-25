@@ -43,7 +43,7 @@ const ExperienceTimeline = () => {
                         <img
                             src="/images/award.jpeg"
                             alt="award" width="100%" height="auto" style={{borderRadius: '20px', padding: '10px 0'}}/>
-                        <img src={"https://media.licdn.com/dms/image/v2/D5622AQF38Fd8Z2mNQw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1712870368493?e=1740009600&v=beta&t=8GCe59fBMGxZG6snHhvwmCwNZPmKMjEUEbkbkjagEvA"}
+                        <img src={"/images/zach_with_ranger.webp"}
                              alt={"Zach Schallenberger with Ford Ranger Raptor"} width={"100%"} height={"auto"} style={{borderRadius: '20px', padding: '10px 0'}}/>
                     </TimelineOppositeContent>}
                     <TimelineSeparator>
