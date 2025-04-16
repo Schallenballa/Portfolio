@@ -94,7 +94,7 @@ const Header = () => {
                 <div className="header-text">
                     <h1 id="headerName">Zachary Schallenberger</h1>
                     <p id="title">Software Engineer</p>
-                    <p id="title">Ford Influencer</p>
+                    <p id="title2">Ford Influencer</p>
                 </div>
             </div>
 

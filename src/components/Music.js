@@ -22,8 +22,10 @@ const Music = () => {
         // Update header elements
         const headerName = document.getElementById('headerName');
         const title = document.getElementById('title');
+        const title2 = document.getElementById('title2');
         if (headerName) headerName.innerHTML = 'Zapps';
         if (title) title.innerHTML = 'Music Producer';
+        if (title2) title2.innerHTML = '';
 
         fadeIn();
 
@@ -34,6 +36,7 @@ const Music = () => {
             fadeOut();
             if (headerName) headerName.innerHTML = 'Zachary Schallenberger';
             if (title) title.innerHTML = 'Software Engineer';
+            if (title2) title2.innerHTML = 'Ford Influencer';
             clearTimeout(timer);
         };
     }, []);

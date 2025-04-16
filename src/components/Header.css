@@ -182,7 +182,7 @@
     color: #333;
 }
 
-#title {
+#title, #title2 {
     font-size: 1rem;
     color: #666;
     margin: 5px 0 0 0;
