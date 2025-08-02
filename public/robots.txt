@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /images/zach_closeup_sad.png
 
 Sitemap: https://zacharyschallenberger.com/sitemap.xml
