@@ -116,12 +116,12 @@ const Music = () => {
                     <div className="music-links" style={{ paddingBottom: '20px' }}>
                         <div>
                             <h2>Latest Single</h2>
-                            <p><em>One More Last Time</em></p>
-                            <p><em>11/2024</em></p>
+                            <p><em>I Wanna Stay</em></p>
+                            <p><em>10/2025</em></p>
                         </div>
                         <div>
                             <FeaturedTrack
-                                src="https://open.spotify.com/embed/track/5YIEEFt6YnsiKRblUREDwo?utm_source=generator"
+                                src="https://open.spotify.com/embed/track/4eUQvMYHsy7grDVDDTBHZw?utm_source=generator"
                                 width="100%" height="352"
                             />
                         </div>
@@ -129,6 +129,10 @@ const Music = () => {
                     <div className="music-links">
                         <h2>Tracks</h2>
                         <div>
+                            <StandardTrack
+                                src="https://open.spotify.com/embed/track/5YIEEFt6YnsiKRblUREDwo?utm_source=generator"
+                                width="100%" height="152"
+                            />
                             <StandardTrack
                                 src="https://open.spotify.com/embed/track/6DEnpiC9VO3rNFHyls0Kzi?utm_source=generator"
                                 width="100%" height="152"
