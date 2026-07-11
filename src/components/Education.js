@@ -22,7 +22,7 @@ const Education = () => {
             <div className="degree">
                 <div className={'degree-title-container'}>
                     <h3>Masters of Business Administration</h3>
-                    <img src={'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/UMDearborn_Vertical_Logo.svg/2234px-UMDearborn_Vertical_Logo.svg.png'} alt="UMD Logo" width={'80px'} height={'auto'}/>
+                    <img src={'https://app.streamlineathletes.com/assets/programs/888/university-of-michigan-dearborn_logo.png'} alt="UMD Logo" width={'80px'} height={'auto'}/>
                 </div>
                 <p>University of Michigan - Dearborn | 2024 - Present</p>
             </div>
