@@ -28,10 +28,10 @@ describe('HomePage', () => {
         // Check for specific meta tags
         const metaTags = document.querySelectorAll('meta');
         const ogTitleMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:title');
-        expect(ogTitleMeta).toHaveAttribute('content', 'Portfolio');
+        expect(ogTitleMeta).toHaveAttribute('content', 'Zachary Schallenberger | Software Engineer & Entrepreneur');
 
         const ogDescriptionMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:description');
-        expect(ogDescriptionMeta).toHaveAttribute('content', 'An online portfolio of Zachary Schallenberger. It contains information about his experience, education, and skills.');
+        expect(ogDescriptionMeta).toHaveAttribute('content', 'Zachary Schallenberger is a Michigan-based software engineer, entrepreneur, and MBA candidate. Explore his experience, education, and technical skills.');
 
         const ogUrlMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:url');
         expect(ogUrlMeta).toHaveAttribute('content', 'https://www.zacharyschallenberger.com/');

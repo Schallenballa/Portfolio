@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Updated import
 import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const HomePage = lazy(() => import('./components/HomePage'));
 const Music = lazy(() => import('./components/Music'));
@@ -21,6 +22,7 @@ function App() {
                         </Routes>
                     </Suspense>
                 </main>
+                <Footer />
             </div>
         </Router>
     );

@@ -8,5 +8,5 @@ const Sitemap = require('react-router-sitemap').default;
 
 
 new Sitemap(router)
-    .build('https://zacharyschallenberger.com')
+    .build('https://www.zacharyschallenberger.com')
     .save('../public/sitemap.xml');

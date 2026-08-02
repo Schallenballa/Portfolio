@@ -5,6 +5,19 @@ import FeaturedTrack from './FeaturedTrackPlayer';
 import StandardTrack from './StandardTrackPlayer';
 
 const Music = () => {
+    const description = "Listen to Zapps, a Michigan electronic music producer creating emotive downtempo soundscapes. Discover the latest single and stream tracks on Spotify, Apple Music, and YouTube Music.";
+    const artistSchema = {
+        "@context": "https://schema.org",
+        "@type": "MusicGroup",
+        name: "Zapps",
+        url: "https://www.zacharyschallenberger.com/Zapps",
+        genre: ["Electronic", "Downtempo"],
+        sameAs: [
+            "https://open.spotify.com/artist/5bVFcbuGnbVAstKk9iUWyK",
+            "https://music.apple.com/us/artist/zapps/1684547283",
+            "https://music.youtube.com/channel/UCxq_FrZqfMNsiOWXCGjhKvg"
+        ]
+    };
     useEffect(() => {
         document.body.classList.add('music-page');
 
@@ -16,11 +29,18 @@ const Music = () => {
     return (
         <>
             <Helmet>
-                <title>Zapps</title>
-                <meta property="og:title" content="Zapps" />
-                <meta property="og:type" content="website" />
+                <title>Zapps | Downtempo Electronic Music Producer</title>
+                <meta name="description" content={description} />
+                <link rel="canonical" href="https://www.zacharyschallenberger.com/Zapps" />
+                <meta property="og:title" content="Zapps | Downtempo Electronic Music Producer" />
+                <meta property="og:type" content="profile" />
                 <meta property="og:url" content={'https://www.zacharyschallenberger.com/Zapps'} />
-                <meta property="og:description" content="In an industry dominated by high-energy beats and dance floor anthems, Zapps' devotion to downtempo electronic music and his capacity to conjure evocative, emotive soundscapes are a breath of fresh air. His music is a reminder that in the heart of the city, one can find tranquility, and in the midst of chaos, serenity can be uncovered." />
+                <meta property="og:description" content={description} />
+                <meta property="og:site_name" content="Zachary Schallenberger" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Zapps | Downtempo Electronic Music Producer" />
+                <meta name="twitter:description" content={description} />
+                <script type="application/ld+json">{JSON.stringify(artistSchema)}</script>
             </Helmet>
             <section className="music">
                     <h2>Listen to Zapps</h2>
