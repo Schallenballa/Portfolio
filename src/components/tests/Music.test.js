@@ -27,4 +27,12 @@ describe('Music', () => {
         const ogDescriptionMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:description');
         expect(ogDescriptionMeta).toHaveAttribute('content', 'In an industry dominated by high-energy beats and dance floor anthems, Zapps\' devotion to downtempo electronic music and his capacity to conjure evocative, emotive soundscapes are a breath of fresh air. His music is a reminder that in the heart of the city, one can find tranquility, and in the midst of chaos, serenity can be uncovered.');
     });
+
+    test('applies and cleans up the music page theme', () => {
+        const { unmount } = render(<Music />);
+
+        expect(document.body).toHaveClass('music-page');
+        unmount();
+        expect(document.body).not.toHaveClass('music-page');
+    });
 });

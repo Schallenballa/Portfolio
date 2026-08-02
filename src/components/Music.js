@@ -5,33 +5,11 @@ import FeaturedTrack from './FeaturedTrackPlayer';
 import StandardTrack from './StandardTrackPlayer';
 
 const Music = () => {
-    // Handle background color transitions and header updates
     useEffect(() => {
-        const fadeIn = () => {
-            document.body.style.transition = 'background-color 0.5s ease-out';
-            document.body.style.backgroundColor = 'black';
-        };
-
-        const fadeOut = () => {
-            document.body.style.transition = 'background-color 0.5s ease-out';
-            document.body.style.backgroundColor = ''; // Reset background color
-        };
-
-        // Update header elements
-        const headerName = document.getElementById('headerName');
-        const title = document.getElementById('title');
-        const title2 = document.getElementById('title2');
-        if (headerName) headerName.innerHTML = 'Zapps';
-        if (title) title.innerHTML = 'Music Producer';
-        if (title2) title2.innerHTML = '';
-
-        fadeIn();
+        document.body.classList.add('music-page');
 
         return () => {
-            fadeOut();
-            if (headerName) headerName.innerHTML = 'Zachary Schallenberger';
-            if (title) title.innerHTML = 'Software Engineer';
-            if (title2) title2.innerHTML = 'Ford Influencer';
+            document.body.classList.remove('music-page');
         };
     }, []);
 

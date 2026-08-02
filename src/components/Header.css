@@ -65,6 +65,7 @@
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     position: relative;
+    text-decoration: none;
 }
 
 .portfolio-button:hover {
@@ -95,6 +96,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    text-decoration: none;
 }
 
 .music-button:before {
@@ -175,14 +177,14 @@
     align-items: flex-start;
 }
 
-#headerName {
+.header-text h1 {
     font-size: 1.8rem;
     font-weight: bold;
     margin: 0;
     color: #333;
 }
 
-#title, #title2 {
+.header-text p {
     font-size: 1rem;
     color: #666;
     margin: 5px 0 0 0;
@@ -216,4 +218,58 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 24px 20px 28px;
+    }
+
+    .header-content {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .headshot-container-mobile {
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.16);
+    }
+
+    .header-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header h1 {
+        max-width: 100%;
+        font-size: clamp(1.65rem, 8vw, 2rem);
+        line-height: 1.15;
+    }
+
+    .header p {
+        margin: 4px 0 0;
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .music-button,
+    .portfolio-button {
+        box-sizing: border-box;
+        width: min(100%, 330px);
+        padding: 14px 18px;
+        font-size: 1rem;
+        line-height: 1.25;
+        text-align: center;
+    }
 }

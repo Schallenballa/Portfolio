@@ -14,15 +14,10 @@ import BMWLogo from "../assets/icons/BMWLogo";
 import FreatsLogo from "../assets/icons/FreatsLogo";
 import TylerTechLogo from "../assets/icons/TylerTechLogo";
 import NSFLogo from "../assets/icons/NSFLogo";
+import useIsMobile from '../hooks/useIsMobile';
 
 const ExperienceTimeline = () => {
-    const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
-
-    React.useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 768);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    const isMobile = useIsMobile();
 
     return (
         <section className="experience-timeline">

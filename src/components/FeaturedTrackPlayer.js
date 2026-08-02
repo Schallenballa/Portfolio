@@ -1,8 +1,8 @@
 import React from "react";
+import SpotifyTrackPlayer from './SpotifyTrackPlayer';
 
 const FeaturedTrackPlayer = ({ src, width, height }) => (
-    <iframe src={src} width={width} height={height} frameBorder={"0"} allowFullScreen={""} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy" style={{padding: "20px 0"}} title={"Featured Track"}></iframe>
+    <SpotifyTrackPlayer src={src} width={width} height={height} title="Featured Track" />
 );
 
 export default FeaturedTrackPlayer;

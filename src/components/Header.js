@@ -1,87 +1,68 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Header.css';
 import { Link, useLocation } from 'react-router-dom';
+import useIsMobile from '../hooks/useIsMobile';
+
+const HEADER_PROFILES = {
+    home: {
+        image: '/images/zach_closeup_circ-240.jpg',
+        imageAlt: 'Zachary Schallenberger',
+        name: 'Zachary Schallenberger',
+        titles: ['Software Engineer', 'Ford Influencer'],
+    },
+    music: {
+        image: '/images/zapps_closeup-240.png',
+        imageAlt: 'Zapps',
+        name: 'Zapps',
+        titles: ['Music Producer'],
+    },
+    notFound: {
+        image: '/images/zach_closeup_sad.png',
+        imageAlt: 'Zachary Schallenberger',
+        name: 'Zachary Schallenberger',
+        titles: ['Software Engineer', 'Ford Influencer'],
+    },
+};
 
 const Header = () => {
     const location = useLocation();
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+    const isMobile = useIsMobile();
     const activeLink = location.pathname === '/Zapps'
         ? 'music'
         : location.pathname === '/' ? 'home' : 'notFound';
 
-    // Handle responsive design
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth <= 768);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const handleImageSelect = () => {
-        if (activeLink === "home") {
-            return (
-                <img
-                    src={"/images/zach_closeup_circ-240.jpg"}
-                    alt="Zachary Schallenberger"
-                    className="headshot"
-                    width="120"
-                    height="120"
-                />
-            )
-        }
-        else if (activeLink === "music") {
-            return (
-                <img
-                    src={"/images/zapps_closeup-240.png"}
-                    alt="Zachary Schallenberger"
-                    className="headshot"
-                    width="120"
-                    height="120"
-                />
-            )
-        }
-        else {
-            return (
-                <img
-                    src={"/images/zach_closeup_sad.png"}
-                    alt="Zachary Schallenberger"
-                    className="headshot"
-                    width="120"
-                    height="120"
-                />
-            )
-        }
-    }
-
+    const profile = HEADER_PROFILES[activeLink];
 
     return (
         <header className="header">
             <div className="header-content">
                 <div className={!isMobile ? 'headshot-container' : 'headshot-container-mobile'}>
-                    {handleImageSelect()}
+                    <img
+                        src={profile.image}
+                        alt={profile.imageAlt}
+                        className="headshot"
+                        width="120"
+                        height="120"
+                    />
                 </div>
 
                 {/* Header Text */}
                 <div className="header-text">
-                    <h1 id="headerName">Zachary Schallenberger</h1>
-                    <p id="title">Software Engineer</p>
-                    <p id="title2">Ford Influencer</p>
+                    <h1>{profile.name}</h1>
+                    {profile.titles.map((title) => <p key={title}>{title}</p>)}
                 </div>
             </div>
 
             {/* Navigation Buttons */}
             <div className="navigation">
                 {activeLink !== "home" && (
-                    <Link to="/">
-                        <button className="portfolio-button">
-                            <span className="portfolio-text">💼 Professional Portfolio 💻</span>
-                        </button>
+                    <Link to="/" className="portfolio-button">
+                        <span className="portfolio-text">💼 Professional Portfolio 💻</span>
                     </Link>
                 )}
                 {activeLink !== "music" && (
-                    <Link to="/Zapps">
-                        <button className="music-button">
-                            <span className="music-text">🎵 Explore My Music 🎶</span>
-                        </button>
+                    <Link to="/Zapps" className="music-button">
+                        <span className="music-text">🎵 Explore My Music 🎶</span>
                     </Link>
                 )}
             </div>
