@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4c2e1d9.css",
-    "main.js": "/static/js/main.b3b61135.js",
+    "main.css": "/static/css/main.dd9921c1.css",
+    "main.js": "/static/js/main.9d0cd081.js",
     "static/js/549.bd5f6896.chunk.js": "/static/js/549.bd5f6896.chunk.js",
     "static/js/324.d81f32c3.chunk.js": "/static/js/324.d81f32c3.chunk.js",
-    "static/media/zach_schallenberger_og.png": "/static/media/zach_schallenberger_og.f7f40a6bd77d4b58ef98.png",
+    "static/media/zach_schallenberger_og-900.jpg": "/static/media/zach_schallenberger_og-900.34bdceaddd2d2eeb08ae.jpg",
     "index.html": "/index.html",
-    "main.c4c2e1d9.css.map": "/static/css/main.c4c2e1d9.css.map",
-    "main.b3b61135.js.map": "/static/js/main.b3b61135.js.map",
+    "main.dd9921c1.css.map": "/static/css/main.dd9921c1.css.map",
+    "main.9d0cd081.js.map": "/static/js/main.9d0cd081.js.map",
     "549.bd5f6896.chunk.js.map": "/static/js/549.bd5f6896.chunk.js.map",
     "324.d81f32c3.chunk.js.map": "/static/js/324.d81f32c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4c2e1d9.css",
-    "static/js/main.b3b61135.js"
+    "static/css/main.dd9921c1.css",
+    "static/js/main.9d0cd081.js"
   ]
 }

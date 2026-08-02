@@ -5,6 +5,8 @@ const NSFLogo = () => {
         <img
             src={'./images/nsf.webp'}
             alt="NSF Logo"
+            width="100"
+            height="101"
             style={{width: '100px', height: 'auto'}}
         />
     );

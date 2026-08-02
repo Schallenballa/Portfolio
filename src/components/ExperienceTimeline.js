@@ -42,9 +42,9 @@ const ExperienceTimeline = () => {
                     >
                         <img
                             src="/images/award.jpeg"
-                            alt="award" width="100%" height="auto" style={{borderRadius: '20px', padding: '10px 0'}}/>
+                            alt="Ford recognition award" width="800" height="602" className="timeline-image"/>
                         <img src={"/images/zach_with_ranger.webp"}
-                             alt={"Zach Schallenberger with Ford Ranger Raptor"} width={"100%"} height={"auto"} style={{borderRadius: '20px', padding: '10px 0'}}/>
+                             alt={"Zach Schallenberger with Ford Ranger Raptor"} width="1284" height="1284" className="timeline-image"/>
                     </TimelineOppositeContent>}
                     <TimelineSeparator>
                         <TimelineDot
@@ -89,8 +89,29 @@ const ExperienceTimeline = () => {
                         variant="body2"
                         color="text.secondary"
                     >
-                        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7126257174820900865" height="919"
-                                width="100%" frameBorder="0" allowFullScreen="" title="Freats LLC LinkedIn Post" scrolling={'no'}></iframe>
+                        <a className="linkedin-post-card"
+                           href="https://www.linkedin.com/posts/freats_freats-llc-was-established-in-2018-by-a-group-activity-7126257178419625986-b0Gg?utm_source=share&utm_medium=member_desktop&rcm=ACoAACGloesBAAyDPdnkJULzyNxotIovs0lITQg"
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="Read the Freats LLC post on LinkedIn">
+                            <div className="linkedin-post-header">
+                                <img src="/images/Freats.jpeg" alt="" width="56" height="56"/>
+                                <div>
+                                    <strong>Freats LLC</strong>
+                                    <span>18 followers</span>
+                                    <span>2y</span>
+                                </div>
+                                <span className="linkedin-wordmark" aria-hidden="true">LinkedIn</span>
+                            </div>
+                            <div className="linkedin-post-copy">
+                                <p>Freats LLC was established in 2018 by a group of four entrepreneurial students at Montana State University-Bozeman at a Hackathon event in 2018. The invaluable experience garnered from conceptualizing and developing our product, engaging with key stakeholders, and learning how to run and operate a business will always be remembered.</p>
+                                <p>Although we have each embarked on different professional courses in our lives, Freats will always serve as a cornerstone of our humble beginnings. With that being said, we are sad to announce that Freats LLC will be dissolving as a company this year. We remain grateful to everyone who accompanied us on our journey and provided unwavering support.</p>
+                                <p><strong>Payton Harrison · Zachary Schallenberger · Joaquin Monterrosa · Zachary Taylor</strong></p>
+                            </div>
+                            <img src="/images/freats-linkedin-post.jpg"
+                                 alt="Freats founders and team members from the company's history"
+                                 width="1080" height="1080" className="linkedin-post-image" loading="lazy"/>
+                            <span className="linkedin-post-cta">View post on LinkedIn</span>
+                        </a>
                     </TimelineOppositeContent>}
                     <TimelineSeparator>
                         <TimelineDot
@@ -129,8 +150,8 @@ const ExperienceTimeline = () => {
                         color="text.secondary"
                     >
                         <img
-                            src="https://www.tylertech.com/Portals/0/Images/Locations.jpg?ver=2020-04-28-094913-993?format=jpg&quality=80"
-                            alt="award" width="100%" height="auto" style={{borderRadius: '20px', padding: '10px 0'}}/>
+                            src="/images/tyler_office.webp"
+                            alt="Tyler Technologies office" width="1658" height="1244" className="timeline-image" loading="lazy"/>
                     </TimelineOppositeContent>}
                     <TimelineSeparator>
                         <TimelineDot
@@ -171,10 +192,10 @@ const ExperienceTimeline = () => {
                     >
                         <img
                             src="/images/technical_poster.webp"
-                            alt="award" width="100%" height="auto" style={{borderRadius: '20px', padding: '10px 0'}}/>
+                            alt="Research technical poster" width="2500" height="1666" className="timeline-image" loading="lazy"/>
                         <img
                             src="/images/hardware.webp"
-                            alt="award" width="100%" height="auto" style={{borderRadius: '20px', padding: '10px 0'}}/>
+                            alt="Research navigation hardware" width="2500" height="3333" className="timeline-image" loading="lazy"/>
                     </TimelineOppositeContent>}
                     <TimelineSeparator>
                         <TimelineDot
@@ -211,11 +232,11 @@ const ExperienceTimeline = () => {
                         color="text.secondary"
                     >
                         <img
-                            src="https://mediapool.bmwgroup.com/cache/P9/202210/P90483676/P90483676-bmw-group-plant-spartanburg-the-home-of-the-x-is-also-becoming-the-home-of-the-battery-electric-vehi-600px.jpg"
-                            alt="BMW Manufacturing, Spartanburg, SC" width="100%" height="auto" style={{borderRadius: '20px', padding: '10px 0'}}/>
+                            src="/images/bmw-spartanburg-plant.jpg"
+                            alt="BMW Manufacturing plant in Spartanburg, South Carolina" width="600" height="362" className="timeline-image" loading="lazy"/>
                         <img
-                            src="https://lp-auto-assets.s3.amazonaws.com/23/bmw/sav-lineup/M1/header.jpg"
-                            alt="BMW X line of cars" width="100%" height="auto" style={{borderRadius: '20px', padding: '10px 0'}}/>
+                            src="/images/bmw-x-lineup.jpg"
+                            alt="BMW X vehicle lineup" width="1200" height="400" className="timeline-image" loading="lazy"/>
                     </TimelineOppositeContent>}
                     <TimelineSeparator>
                         <TimelineDot

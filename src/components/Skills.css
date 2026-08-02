@@ -4,7 +4,8 @@
     padding: 20px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) -100%, #fff) no-repeat center / auto, url('../../public/images/zach_schallenberger_og.png') no-repeat center;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) -100%, #fff) no-repeat center / auto, url('../../public/images/zach_schallenberger_og-900.jpg') no-repeat center;
+    background-size: auto, cover;
     background-position-x: 30%;
 }
 
