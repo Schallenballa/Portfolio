@@ -46,10 +46,11 @@ const Header = () => {
         if (activeLink === "home") {
             return (
                 <img
-                    src={"/images/zach_closeup_circ.png"}
+                    src={"/images/zach_closeup_circ-240.jpg"}
                     alt="Zachary Schallenberger"
                     className={`headshot ${isLoading ? 'hidden' : ''}`}
-                    width="120px"
+                    width="120"
+                    height="120"
                     onLoad={handleImageLoad}
                 />
             )
@@ -60,7 +61,8 @@ const Header = () => {
                     src={"/images/zapps_closeup.png"}
                     alt="Zachary Schallenberger"
                     className={`headshot ${isLoading ? 'hidden' : ''}`}
-                    width="120px"
+                    width="120"
+                    height="120"
                     onLoad={handleImageLoad}
                 />
             )
@@ -71,7 +73,8 @@ const Header = () => {
                     src={"/images/zach_closeup_sad.png"}
                     alt="Zachary Schallenberger"
                     className={`headshot ${isLoading ? 'hidden' : ''}`}
-                    width="120px"
+                    width="120"
+                    height="120"
                     onLoad={handleImageLoad}
                 />
             )

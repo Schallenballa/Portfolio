@@ -88,7 +88,7 @@ const Music = () => {
                             rel="noopener noreferrer"
                             className="music-link spotify"
                         >
-                            <img src="/images/spotify.png" alt="Spotify Logo" className="spotify-logo" />
+                            <img src="/images/spotify.png" alt="Spotify Logo" className="spotify-logo" width="939" height="940" />
                             <span>Spotify</span>
                         </a>
 
@@ -98,7 +98,7 @@ const Music = () => {
                             rel="noopener noreferrer"
                             className="music-link apple-music"
                         >
-                            <img src="/images/apple-music.png" alt="Apple Music Logo" className="apple-logo" />
+                            <img src="/images/apple-music.png" alt="Apple Music Logo" className="apple-logo" width="3840" height="2160" />
                             <span>Apple Music</span>
                         </a>
 
@@ -108,7 +108,7 @@ const Music = () => {
                             rel="noopener noreferrer"
                             className="music-link yt-music"
                         >
-                            <img src="/images/youtube-music.png" alt="YouTube Music Logo" className="yt-logo" />
+                            <img src="/images/youtube-music.png" alt="YouTube Music Logo" className="yt-logo" width="2048" height="2048" />
                             <span>YouTube Music</span>
                         </a>
                     </div>

@@ -22,14 +22,14 @@ const Education = () => {
             <div className="degree">
                 <div className={'degree-title-container'}>
                     <h3>Masters of Business Administration</h3>
-                    <img src="/images/um-dearborn-logo.svg" alt="University of Michigan-Dearborn logo" width="80" height="auto"/>
+                    <img src="/images/um-dearborn-logo.svg" alt="University of Michigan-Dearborn logo" width="80" height="80"/>
                 </div>
                 <p>University of Michigan - Dearborn | 2024 - Present</p>
             </div>
             <div className="degree">
                 <div className={'degree-title-container'}>
                     <h3>Bachelor of Science in Computer Science</h3>
-                    <img src={'https://www.montana.edu/marketing/images/msu-identity-logo-basics/MSU-core-logo-400x300px.png'} alt="MSU Logo" width={'80px'} height={'100%'}/>
+                    <img src="/images/msu.jpeg" alt="Montana State University logo" width="80" height="80"/>
                 </div>
                 <p>Montana State University | 2016 - 2021</p>
                 <div
@@ -59,6 +59,8 @@ const Education = () => {
                             }
                             alt="MSU Diploma"
                             className={`image ${expanded ? "clear" : "blurred"}`}
+                            width="800"
+                            height="619"
                         />
                     </button>
                 </div>

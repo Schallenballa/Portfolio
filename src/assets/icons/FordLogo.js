@@ -5,6 +5,8 @@ const FordLogo = () => {
         <img
             src={'./images/ford.webp'}
             alt="Ford Logo"
+            width="100"
+            height="101"
             style={{width: '100px', height: 'auto'}}
         />
     );
