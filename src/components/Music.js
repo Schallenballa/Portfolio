@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import { Skeleton } from '@mui/material';
-import loadable from '@loadable/component';
+import React, { useEffect } from 'react';
 import './Music.css';
 import {Helmet} from "react-helmet";
+import FeaturedTrack from './FeaturedTrackPlayer';
+import StandardTrack from './StandardTrackPlayer';
 
 const Music = () => {
-    const [isLoading, setIsLoading] = useState(true);
-
     // Handle background color transitions and header updates
     useEffect(() => {
         const fadeIn = () => {
@@ -29,26 +27,13 @@ const Music = () => {
 
         fadeIn();
 
-        // Set loading to false after a simulated delay (or based on asset loads)
-        const timer = setTimeout(() => setIsLoading(false), 1000);
-
         return () => {
             fadeOut();
             if (headerName) headerName.innerHTML = 'Zachary Schallenberger';
             if (title) title.innerHTML = 'Software Engineer';
             if (title2) title2.innerHTML = 'Ford Influencer';
-            clearTimeout(timer);
         };
     }, []);
-
-    // Lazy load components for music tracks
-    const FeaturedTrack = loadable(() => import('./FeaturedTrackPlayer'), {
-        fallback: <Skeleton variant="rectangular" width="100%" height={352} />,
-    });
-
-    const StandardTrack = loadable(() => import('./StandardTrackPlayer'), {
-        fallback: <Skeleton variant="rectangular" width="100%" height={152} />,
-    });
 
     return (
         <>
@@ -59,26 +44,7 @@ const Music = () => {
                 <meta property="og:url" content={'https://www.zacharyschallenberger.com/Zapps'} />
                 <meta property="og:description" content="In an industry dominated by high-energy beats and dance floor anthems, Zapps' devotion to downtempo electronic music and his capacity to conjure evocative, emotive soundscapes are a breath of fresh air. His music is a reminder that in the heart of the city, one can find tranquility, and in the midst of chaos, serenity can be uncovered." />
             </Helmet>
-            {isLoading ? (
-                <section className="skeleton-loading">
-                    {/* Skeletons for the header */}
-                    <Skeleton variant="text" width={200} height={40} />
-                    <Skeleton variant="text" width={150} height={25} />
-                    {/* Skeletons for music links */}
-                    <div className="music-links">
-                        {[...Array(3)].map((_, index) => (
-                            <Skeleton key={index} variant="rectangular" width={150} height={50} />
-                        ))}
-                    </div>
-                    {/* Skeleton for featured track */}
-                    <Skeleton variant="rectangular" width="100%" height={352} />
-                    {/* Skeletons for standard tracks */}
-                    {[...Array(2)].map((_, index) => (
-                        <Skeleton key={index} variant="rectangular" width="100%" height={152} />
-                    ))}
-                </section>
-            ) : (
-                <section className="music">
+            <section className="music">
                     <h2>Listen to Zapps</h2>
                     <p>Check out my latest tracks on all streaming platforms!</p>
                     <div className="music-links">
@@ -88,7 +54,7 @@ const Music = () => {
                             rel="noopener noreferrer"
                             className="music-link spotify"
                         >
-                            <img src="/images/spotify.png" alt="Spotify Logo" className="spotify-logo" width="939" height="940" />
+                            <img src="/images/spotify-60.png" alt="Spotify Logo" className="spotify-logo" width="60" height="60" />
                             <span>Spotify</span>
                         </a>
 
@@ -98,7 +64,7 @@ const Music = () => {
                             rel="noopener noreferrer"
                             className="music-link apple-music"
                         >
-                            <img src="/images/apple-music.png" alt="Apple Music Logo" className="apple-logo" width="3840" height="2160" />
+                            <img src="/images/apple-music-60.png" alt="Apple Music Logo" className="apple-logo" width="60" height="33" />
                             <span>Apple Music</span>
                         </a>
 
@@ -108,7 +74,7 @@ const Music = () => {
                             rel="noopener noreferrer"
                             className="music-link yt-music"
                         >
-                            <img src="/images/youtube-music.png" alt="YouTube Music Logo" className="yt-logo" width="2048" height="2048" />
+                            <img src="/images/youtube-music-60.png" alt="YouTube Music Logo" className="yt-logo" width="60" height="60" />
                             <span>YouTube Music</span>
                         </a>
                     </div>
@@ -143,8 +109,7 @@ const Music = () => {
                             />
                         </div>
                     </div>
-                </section>
-            )}
+            </section>
         </>
     );
 };

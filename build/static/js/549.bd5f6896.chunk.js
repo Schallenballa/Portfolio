@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[549],{549:function(e,r,l){l.r(r);l(43);var t=l(579);r.default=({src:e,width:r,height:l})=>(0,t.jsx)("iframe",{src:e,width:r,height:l,frameBorder:"0",allowFullScreen:"",allow:"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",loading:"lazy",style:{padding:"20px 0"},title:"Featured Track"})}}]);
-//# sourceMappingURL=549.bd5f6896.chunk.js.map
