@@ -18,6 +18,7 @@ describe('Header', () => {
         renderHeaderAt('/');
 
         expect(screen.getByRole('heading', { name: 'Zachary Schallenberger' })).toBeInTheDocument();
+        expect(screen.getByRole('img', { name: 'Zachary Schallenberger' })).toHaveAttribute('src', '/images/zach-closeup-192.webp');
         expect(screen.getByText('Software Engineer')).toBeInTheDocument();
         expect(screen.getByText('Ford Influencer')).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /explore zapps music/i })).toHaveAttribute('href', '/Zapps');
