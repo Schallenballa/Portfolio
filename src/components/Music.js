@@ -98,7 +98,7 @@ const Music = () => {
                         </a>
                     </div>
                     <hr />
-                    <div className="music-links" style={{ paddingBottom: '20px' }}>
+                    <div className="music-links" style={{ padding: '20px' }}>
                         <div>
                             <h2>Latest Single</h2>
                             <p><em>I Wanna Stay</em></p>
@@ -106,28 +106,28 @@ const Music = () => {
                         </div>
                         <div>
                             <FeaturedTrack
-                                src="https://open.spotify.com/embed/track/4eUQvMYHsy7grDVDDTBHZw?utm_source=generator"
-                                width="100%" height="352"
+                                src="https://embed.music.apple.com/us/album/i-wanna-stay/1845962771?i=1845962772"
+                                width="100%"
                             />
                         </div>
                     </div>
-                    <div className="music-links">
-                        <h2>Tracks</h2>
-                        <div>
-                            <StandardTrack
-                                src="https://open.spotify.com/embed/track/5YIEEFt6YnsiKRblUREDwo?utm_source=generator"
-                                width="100%" height="152"
-                            />
-                            <StandardTrack
-                                src="https://open.spotify.com/embed/track/6DEnpiC9VO3rNFHyls0Kzi?utm_source=generator"
-                                width="100%" height="152"
-                            />
-                            <StandardTrack
-                                src="https://open.spotify.com/embed/track/1PP9GQZVhl7Rap8aOP1r5e?utm_source=generator"
-                                width="100%" height="152"
-                            />
-                        </div>
+                <div className="music-links">
+                    <h2>Tracks</h2>
+                    <div>
+                        <StandardTrack
+                            src="https://embed.music.apple.com/us/album/one-more-last-time/1781546965?i=1781546966"
+                            width="100%"
+                        />
+                        <StandardTrack
+                            src="https://embed.music.apple.com/us/album/seawall-feat-neev-zapps-remix/1763263990?i=1763263991"
+                            width="100%"
+                        />
+                        <StandardTrack
+                            src="https://embed.music.apple.com/us/album/dont-you-even-say/1684613770?i=1684613771"
+                            width="100%"
+                        />
                     </div>
+                </div>
             </section>
         </>
     );
