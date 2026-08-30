@@ -16,8 +16,10 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node scripts/start-with-audio-manifest.js",
+    "prebuild": "node scripts/generate-unreleased-manifest.js",
     "build": "react-scripts build",
+    "pretest": "node scripts/generate-unreleased-manifest.js",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject"
   },
