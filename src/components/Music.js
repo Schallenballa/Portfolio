@@ -27,7 +27,11 @@ const releases = [
     },
     {
         title: 'Seawall',
-        subtitle: 'feat. Neev · Zapps Remix',
+        subtitle: 'Zapps Remix',
+        collaborator: {
+            name: 'Neev',
+            href: 'https://music.apple.com/us/artist/neev/1472346168',
+        },
         year: '2024',
         eyebrow: 'Remix · Aug 14, 2024',
         src: 'https://embed.music.apple.com/us/album/seawall-feat-neev-zapps-remix/1763263990?i=1763263991',
@@ -177,7 +181,15 @@ const Music = () => {
                                 <div className="release-content">
                                     <p className="release-eyebrow">{release.eyebrow}</p>
                                     <h3>{release.title}</h3>
-                                    {release.subtitle && <p className="release-subtitle">{release.subtitle}</p>}
+                                    {release.collaborator && (
+                                        <p className="release-subtitle">
+                                            feat.{' '}
+                                            <a href={release.collaborator.href} target="_blank" rel="noopener noreferrer">
+                                                {release.collaborator.name}
+                                            </a>
+                                            {' · '}{release.subtitle}
+                                        </p>
+                                    )}
                                     {release.description && <p className="release-description">{release.description}</p>}
                                     <div className="release-player">
                                         <Player

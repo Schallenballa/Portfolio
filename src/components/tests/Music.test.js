@@ -37,4 +37,13 @@ describe('Music', () => {
         unmount();
         expect(document.body).not.toHaveClass('music-page');
     });
+
+    test('links the Seawall collaborator to the correct Apple Music artist page', () => {
+        render(<Music />);
+
+        expect(screen.getByRole('link', { name: 'Neev' })).toHaveAttribute(
+            'href',
+            'https://music.apple.com/us/artist/neev/1472346168'
+        );
+    });
 });

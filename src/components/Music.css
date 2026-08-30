@@ -301,6 +301,21 @@ body.music-page .footer a { color: #aaa3b4; }
 
 .release-subtitle { margin: 12px 0 0; color: #c3bcc8; font-size: 0.9rem; }
 
+.release-subtitle a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.35);
+    text-underline-offset: 4px;
+    transition: color 180ms ease, text-decoration-color 180ms ease;
+}
+
+.release-subtitle a:hover,
+.release-subtitle a:focus-visible {
+    color: #fff;
+    text-decoration-color: currentColor;
+}
+
 .release-description {
     max-width: 440px;
     margin: 20px 0 0;
