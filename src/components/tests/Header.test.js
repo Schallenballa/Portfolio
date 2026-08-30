@@ -20,15 +20,15 @@ describe('Header', () => {
         expect(screen.getByRole('heading', { name: 'Zachary Schallenberger' })).toBeInTheDocument();
         expect(screen.getByText('Software Engineer')).toBeInTheDocument();
         expect(screen.getByText('Ford Influencer')).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /explore my music/i })).toHaveAttribute('href', '/Zapps');
+        expect(screen.getByRole('link', { name: /explore zapps music/i })).toHaveAttribute('href', '/Zapps');
     });
 
     test('derives the music profile from the current route', () => {
         renderHeaderAt('/Zapps');
 
-        expect(screen.getByRole('heading', { name: 'Zapps' })).toBeInTheDocument();
-        expect(screen.getByText('Music Producer')).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Zapps — Electronic Music Producer' })).toBeInTheDocument();
+        expect(screen.getByText('Artist project by Zachary Schallenberger')).toBeInTheDocument();
         expect(screen.queryByText('Ford Influencer')).not.toBeInTheDocument();
-        expect(screen.getByRole('img', { name: 'Zapps' })).toHaveAttribute('src', '/images/zapps_closeup-240.png');
+        expect(screen.getByRole('img', { name: /Zapps, the electronic music artist project/i })).toHaveAttribute('src', '/images/zapps_closeup-240.png');
     });
 });

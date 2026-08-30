@@ -31,7 +31,7 @@ describe('HomePage', () => {
         expect(ogTitleMeta).toHaveAttribute('content', 'Zachary Schallenberger | Software Engineer & Entrepreneur');
 
         const ogDescriptionMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:description');
-        expect(ogDescriptionMeta).toHaveAttribute('content', 'Zachary Schallenberger is a Michigan-based software engineer, entrepreneur, and MBA candidate. Explore his experience, education, and technical skills.');
+        expect(ogDescriptionMeta).toHaveAttribute('content', 'Zachary Schallenberger is a Michigan-based software engineer, entrepreneur, MBA candidate, and electronic music producer known as Zapps.');
 
         const ogUrlMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:url');
         expect(ogUrlMeta).toHaveAttribute('content', 'https://www.zacharyschallenberger.com/');

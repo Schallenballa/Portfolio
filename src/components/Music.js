@@ -5,17 +5,35 @@ import FeaturedTrack from './FeaturedTrackPlayer';
 import StandardTrack from './StandardTrackPlayer';
 
 const Music = () => {
-    const description = "Listen to Zapps, a Michigan electronic music producer creating emotive downtempo soundscapes. Discover the latest single and stream tracks on Spotify, Apple Music, and YouTube Music.";
+    const title = "Zapps — Electronic Music Producer & Artist | Zachary Schallenberger";
+    const description = "Zapps is the Detroit-based electronic music project of producer Zachary Schallenberger. Explore the latest single and release catalog on major streaming platforms.";
     const artistSchema = {
         "@context": "https://schema.org",
-        "@type": "MusicGroup",
-        name: "Zapps",
-        url: "https://www.zacharyschallenberger.com/Zapps",
-        genre: ["Electronic", "Downtempo"],
-        sameAs: [
-            "https://open.spotify.com/artist/5bVFcbuGnbVAstKk9iUWyK",
-            "https://music.apple.com/us/artist/zapps/1684547283",
-            "https://music.youtube.com/channel/UCxq_FrZqfMNsiOWXCGjhKvg"
+        "@graph": [
+            {
+                "@type": "MusicGroup",
+                "@id": "https://www.zacharyschallenberger.com/Zapps#artist",
+                name: "Zapps",
+                url: "https://www.zacharyschallenberger.com/Zapps",
+                image: "https://www.zacharyschallenberger.com/images/zapps_closeup.png",
+                description,
+                genre: ["Electronic", "Downtempo"],
+                foundingLocation: {"@type": "Place", name: "Detroit, Michigan"},
+                member: {"@id": "https://www.zacharyschallenberger.com/#person"},
+                sameAs: [
+                    "https://open.spotify.com/artist/5bVFcbuGnbVAstKk9iUWyK",
+                    "https://music.apple.com/us/artist/zapps/1684547283",
+                    "https://music.youtube.com/channel/UCxq_FrZqfMNsiOWXCGjhKvg"
+                ]
+            },
+            {
+                "@type": "Person",
+                "@id": "https://www.zacharyschallenberger.com/#person",
+                name: "Zachary Schallenberger",
+                alternateName: "Zapps",
+                url: "https://www.zacharyschallenberger.com/",
+                memberOf: {"@id": "https://www.zacharyschallenberger.com/Zapps#artist"}
+            }
         ]
     };
     useEffect(() => {
@@ -29,22 +47,25 @@ const Music = () => {
     return (
         <>
             <Helmet>
-                <title>Zapps | Downtempo Electronic Music Producer</title>
+                <title>{title}</title>
                 <meta name="description" content={description} />
                 <link rel="canonical" href="https://www.zacharyschallenberger.com/Zapps" />
-                <meta property="og:title" content="Zapps | Downtempo Electronic Music Producer" />
-                <meta property="og:type" content="profile" />
+                <meta property="og:title" content={title} />
+                <meta property="og:type" content="website" />
                 <meta property="og:url" content={'https://www.zacharyschallenberger.com/Zapps'} />
                 <meta property="og:description" content={description} />
                 <meta property="og:site_name" content="Zachary Schallenberger" />
+                <meta property="og:image" content="https://www.zacharyschallenberger.com/images/zapps_closeup.png" />
+                <meta property="og:image:alt" content="Portrait of electronic music producer Zapps, Zachary Schallenberger" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Zapps | Downtempo Electronic Music Producer" />
+                <meta name="twitter:title" content={title} />
                 <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content="https://www.zacharyschallenberger.com/images/zapps_closeup.png" />
                 <script type="application/ld+json">{JSON.stringify(artistSchema)}</script>
             </Helmet>
             <section className="music">
                     <h2>Listen to Zapps</h2>
-                    <p>Check out my latest tracks on all streaming platforms!</p>
+                    <p className="music-intro">Zapps is the electronic music artist project of Detroit-based producer Zachary Schallenberger, blending emotive downtempo textures with modern electronic production. Hear the latest single, <em>I Wanna Stay</em>, and explore the existing release catalog below.</p>
                     <div className="music-links">
                         <a
                             href="https://open.spotify.com/artist/5bVFcbuGnbVAstKk9iUWyK?si=Dm_syrdFSVK2ppYwOtgWTQ"

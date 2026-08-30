@@ -15,6 +15,14 @@
     margin-bottom: 20px;
 }
 
+.music .music-intro {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
 .music-links {
     display: flex;
     justify-content: center;
