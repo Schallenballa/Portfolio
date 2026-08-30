@@ -1,8 +1,8 @@
 import React from "react";
-import SpotifyTrackPlayer from './SpotifyTrackPlayer';
+import AppleMusicPlayer from './AppleMusicPlayer';
 
-const FeaturedTrackPlayer = ({ src, width, height }) => (
-    <SpotifyTrackPlayer src={src} width={width} height={height} title="Featured Track" />
+const FeaturedTrackPlayer = ({ src, width, height, title = 'Featured Track' }) => (
+    <AppleMusicPlayer src={src} width={width} height={height} title={title} />
 );
 
 export default FeaturedTrackPlayer;

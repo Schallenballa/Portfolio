@@ -27,7 +27,7 @@ describe('Music', () => {
         const ogDescriptionMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:description');
         expect(ogDescriptionMeta).toHaveAttribute('content', 'Zapps is the Detroit-based electronic music project of producer Zachary Schallenberger. Explore the latest single and release catalog on major streaming platforms.');
 
-        expect(screen.getByText(/Zapps is the electronic music artist project of Detroit-based producer Zachary Schallenberger/i)).toBeInTheDocument();
+        expect(screen.getByText(/Zapps is the electronic artist project of producer Zachary Schallenberger/i)).toBeInTheDocument();
     });
 
     test('applies and cleans up the music page theme', () => {

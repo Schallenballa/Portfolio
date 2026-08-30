@@ -18,6 +18,6 @@ describe('StandardTrackPlayer', () => {
         expect(iframe).toHaveAttribute('height', height);
         expect(iframe).toHaveAttribute('frameBorder', '0');
         expect(iframe).toHaveAttribute('loading', 'lazy');
-        expect(iframe).toHaveStyle('padding: 20px 0');
+        expect(iframe).toHaveStyle('overflow: hidden');
     });
 });
