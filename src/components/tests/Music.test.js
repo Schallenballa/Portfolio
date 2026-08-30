@@ -22,10 +22,12 @@ describe('Music', () => {
 
         const metaTags = document.querySelectorAll('meta');
         const ogTitleMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:title');
-        expect(ogTitleMeta).toHaveAttribute('content', 'Zapps | Downtempo Electronic Music Producer');
+        expect(ogTitleMeta).toHaveAttribute('content', 'Zapps — Electronic Music Producer & Artist | Zachary Schallenberger');
 
         const ogDescriptionMeta = Array.from(metaTags).find(tag => tag.getAttribute('property') === 'og:description');
-        expect(ogDescriptionMeta).toHaveAttribute('content', 'Listen to Zapps, a Michigan electronic music producer creating emotive downtempo soundscapes. Discover the latest single and stream tracks on Spotify, Apple Music, and YouTube Music.');
+        expect(ogDescriptionMeta).toHaveAttribute('content', 'Zapps is the Detroit-based electronic music project of producer Zachary Schallenberger. Explore the latest single and release catalog on major streaming platforms.');
+
+        expect(screen.getByText(/Zapps is the electronic music artist project of Detroit-based producer Zachary Schallenberger/i)).toBeInTheDocument();
     });
 
     test('applies and cleans up the music page theme', () => {

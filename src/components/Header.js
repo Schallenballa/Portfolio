@@ -12,9 +12,9 @@ const HEADER_PROFILES = {
     },
     music: {
         image: '/images/zapps_closeup-240.png',
-        imageAlt: 'Zapps',
-        name: 'Zapps',
-        titles: ['Music Producer'],
+        imageAlt: 'Zapps, the electronic music artist project by Zachary Schallenberger',
+        name: 'Zapps — Electronic Music Producer',
+        titles: ['Artist project by Zachary Schallenberger'],
     },
     notFound: {
         image: '/images/zach_closeup_sad.png',
@@ -62,7 +62,7 @@ const Header = () => {
                 )}
                 {activeLink !== "music" && (
                     <Link to="/Zapps" className="music-button">
-                        <span className="music-text">🎵 Explore My Music 🎶</span>
+                        <span className="music-text">🎵 Explore Zapps Music 🎶</span>
                     </Link>
                 )}
             </div>
