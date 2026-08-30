@@ -41,9 +41,25 @@ describe('Music', () => {
     test('links the Seawall collaborator to the correct Apple Music artist page', () => {
         render(<Music />);
 
-        expect(screen.getByRole('link', { name: 'Neev' })).toHaveAttribute(
+        expect(screen.getAllByRole('link', { name: 'Neev' })[0]).toHaveAttribute(
             'href',
             'https://music.apple.com/us/artist/neev/1472346168'
         );
+    });
+
+    test('renders collaborator profiles and production credits', () => {
+        render(<Music />);
+
+        expect(screen.getByRole('heading', { name: /artists i’ve worked with/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /Dariya/i })).toHaveAttribute(
+            'href',
+            'https://open.spotify.com/artist/2WpOIHP25z050UWIXG9gUE?si=3BJEaGBcRzyX9O5q2diaNw'
+        );
+        expect(screen.getByRole('link', { name: /When To Say When/i })).toHaveAttribute(
+            'href',
+            'https://open.spotify.com/track/3mCiyC0rmkwP3jHeYPsAYG?si=9dcd8920fec04d31'
+        );
+        expect(screen.getByText(/producing the electronic elements/i)).toBeInTheDocument();
+        expect(screen.getByText(/original electronic music · unreleased/i)).toBeInTheDocument();
     });
 });

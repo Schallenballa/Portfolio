@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import FeaturedTrack from './FeaturedTrackPlayer';
 import StandardTrack from './StandardTrackPlayer';
 import UnreleasedBrewer from './UnreleasedBrewer';
+import Collaborators from './Collaborators';
 
 const releases = [
     {
@@ -27,6 +28,7 @@ const releases = [
         number: '02',
     },
     {
+        id: 'seawall',
         title: 'Seawall',
         subtitle: 'Zapps Remix',
         collaborator: {
@@ -172,6 +174,7 @@ const Music = () => {
                         return (
                             <article
                                 key={release.title}
+                                id={release.id}
                                 className={`release-card release-${release.palette}${release.featured ? ' release-featured' : ''}`}
                             >
                                 <div className="release-art" aria-hidden="true">
@@ -210,6 +213,8 @@ const Music = () => {
                         );
                     })}
                 </div>
+
+                <Collaborators />
 
                 <div className="music-outro">
                     <p>Independent sounds from Detroit.</p>
