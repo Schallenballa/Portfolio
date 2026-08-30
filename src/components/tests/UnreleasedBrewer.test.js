@@ -1,6 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import UnreleasedBrewer, { getFadeVolume, shuffleTrackOrder } from '../UnreleasedBrewer';
+import unreleasedTracks from '../../generated/unreleasedTracks';
 
 describe('UnreleasedBrewer', () => {
     beforeEach(() => {
@@ -36,8 +37,8 @@ describe('UnreleasedBrewer', () => {
         fireEvent.click(screen.getByRole('button', { name: /play a random unreleased music clip/i }));
 
         await waitFor(() => expect(window.HTMLMediaElement.prototype.play).toHaveBeenCalledTimes(1));
-        expect(audio.src).toContain('Honey%20flow.m4a');
-        expect(screen.getByText(/unreleased pour 01 of 05/i)).toBeInTheDocument();
+        expect(unreleasedTracks.some((track) => audio.src.endsWith(track))).toBe(true);
+        expect(screen.getByText(`Unreleased pour 01 of ${String(unreleasedTracks.length).padStart(2, '0')}`)).toBeInTheDocument();
     });
 
     test('pauses the current clip and offers another random pour', async () => {
@@ -51,7 +52,7 @@ describe('UnreleasedBrewer', () => {
         expect(screen.getByRole('button', { name: /resume unreleased music clip/i })).toBeInTheDocument();
 
         fireEvent.click(screen.getByRole('button', { name: /stir another/i }));
-        await waitFor(() => expect(screen.getByText(/unreleased pour 02 of 05/i)).toBeInTheDocument());
+        await waitFor(() => expect(screen.getByText(`Unreleased pour 02 of ${String(unreleasedTracks.length).padStart(2, '0')}`)).toBeInTheDocument());
     });
 
     test('offers a next icon beside the record after playback begins', async () => {
@@ -61,7 +62,7 @@ describe('UnreleasedBrewer', () => {
         const nextButton = await screen.findByRole('button', { name: /play next unreleased music clip/i });
         fireEvent.click(nextButton);
 
-        await waitFor(() => expect(screen.getByText(/unreleased pour 02 of 05/i)).toBeInTheDocument());
+        await waitFor(() => expect(screen.getByText(`Unreleased pour 02 of ${String(unreleasedTracks.length).padStart(2, '0')}`)).toBeInTheDocument());
     });
 
     test('de-emphasizes the record and highlights what to do when a clip ends', async () => {
