@@ -3,6 +3,7 @@ import './Music.css';
 import { Helmet } from 'react-helmet';
 import FeaturedTrack from './FeaturedTrackPlayer';
 import StandardTrack from './StandardTrackPlayer';
+import UnreleasedBrewer from './UnreleasedBrewer';
 
 const releases = [
     {
@@ -156,6 +157,8 @@ const Music = () => {
                         ))}
                     </div>
                 </div>
+
+                <UnreleasedBrewer />
 
                 <div className="release-heading">
                     <p>Four singles</p>
