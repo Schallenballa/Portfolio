@@ -5,7 +5,7 @@ import useIsMobile from '../hooks/useIsMobile';
 
 const HEADER_PROFILES = {
     home: {
-        image: '/images/zach_closeup_circ-240.jpg',
+        image: '/images/zach-closeup-192.webp',
         imageAlt: 'Zachary Schallenberger',
         name: 'Zachary Schallenberger',
         titles: ['Software Engineer', 'Ford Influencer'],

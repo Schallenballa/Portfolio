@@ -89,7 +89,7 @@ const ExperienceTimeline = () => {
                            target="_blank" rel="noopener noreferrer"
                            aria-label="Read the Freats LLC post on LinkedIn">
                             <div className="linkedin-post-header">
-                                <img src="/images/Freats.jpeg" alt="" width="56" height="56"/>
+                                <img src="/images/freats-200.webp" alt="" width="56" height="56"/>
                                 <div>
                                     <strong>Freats LLC</strong>
                                     <span>18 followers</span>

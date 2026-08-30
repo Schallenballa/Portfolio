@@ -3,7 +3,7 @@ import React from 'react';
 const FreatsLogo = () => {
     return (
         <img
-            src={'./images/Freats.jpeg'}
+            src={'./images/freats-200.webp'}
             alt="Freats Logo"
             width="100"
             height="100"

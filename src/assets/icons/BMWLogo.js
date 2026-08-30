@@ -3,7 +3,7 @@ import React from 'react';
 const BMWLogo = () => {
     return (
         <img
-            src={'./images/BMW.png'}
+            src={'./images/bmw-logo-200.webp'}
             alt="BMW Logo"
             width="100"
             height="100"

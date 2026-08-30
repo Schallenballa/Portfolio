@@ -29,7 +29,7 @@ const Education = () => {
             <div className="degree">
                 <div className={'degree-title-container'}>
                     <h3>Bachelor of Science in Computer Science</h3>
-                    <img src="/images/msu.jpeg" alt="Montana State University logo" width="80" height="80"/>
+                    <img src="/images/msu-160.webp" alt="Montana State University logo" width="80" height="80"/>
                 </div>
                 <p>Montana State University | 2016 - 2021</p>
                 <div
@@ -55,7 +55,7 @@ const Education = () => {
                     >
                         <img
                             src={
-                                "/images/diploma.jpeg"
+                                "/images/diploma-640.webp"
                             }
                             alt="MSU Diploma"
                             className={`image ${expanded ? "clear" : "blurred"}`}
