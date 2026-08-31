@@ -2,63 +2,6 @@ body.music-page {
     background: #07070a;
 }
 
-body.music-page .App {
-    max-width: 1120px;
-    padding: 0;
-    overflow: hidden;
-    color: #f7f4ee;
-    background: #0d0c12;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    box-shadow: 0 30px 100px rgba(0, 0, 0, 0.55);
-}
-
-body.music-page .header {
-    position: relative;
-    z-index: 2;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 22px 34px;
-    text-align: left;
-    background: rgba(13, 12, 18, 0.88);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-body.music-page .header-content { margin: 0; }
-body.music-page .headshot-container { width: 54px; height: 54px; }
-body.music-page .header-text h1,
-body.music-page .header-text p { color: #f7f4ee; }
-body.music-page .header-text h1 { font-size: 1.15rem; letter-spacing: -0.02em; }
-body.music-page .header-text p { font-size: 0.78rem; color: #aaa3b4; }
-
-body.music-page .portfolio-button {
-    padding: 10px 16px;
-    color: #f7f4ee;
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    border-radius: 999px;
-    box-shadow: none;
-}
-
-body.music-page .portfolio-button:hover {
-    color: #0d0c12;
-    background: #f7f4ee;
-    border-color: #f7f4ee;
-}
-
-body.music-page .footer {
-    margin: 0;
-    padding: 28px;
-    background: #0d0c12;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 0;
-}
-
-body.music-page .footer p,
-body.music-page .footer a { color: #aaa3b4; }
-
 .music {
     --paper: #f7f4ee;
     position: relative;
@@ -955,38 +898,6 @@ body.music-page .footer a { color: #aaa3b4; }
 }
 
 @media (max-width: 768px) {
-    body.music-page .App {
-        width: 100%;
-        margin: 0;
-        border: 0;
-        border-radius: 0;
-    }
-
-    body.music-page .header {
-        flex-direction: column;
-        gap: 18px;
-        padding: 20px;
-        text-align: center;
-    }
-
-    body.music-page .header-content {
-        flex-direction: row;
-        justify-content: center;
-        margin: 0;
-    }
-
-    body.music-page .headshot-container-mobile {
-        width: 58px;
-        height: 58px;
-        flex: 0 0 58px;
-    }
-
-    body.music-page .header-text {
-        width: auto;
-        align-items: flex-start;
-        text-align: left;
-    }
-
     .music { padding: 72px 18px 44px; background-size: 40px 40px; }
     .music-hero { margin-bottom: 82px; }
 

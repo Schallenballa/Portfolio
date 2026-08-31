@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect } from 'react';
 import './Music.css';
 import { Helmet } from 'react-helmet';
 import FeaturedTrack from './FeaturedTrackPlayer';
@@ -107,7 +107,7 @@ const Music = () => {
         ],
     };
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         document.body.classList.add('music-page');
         return () => document.body.classList.remove('music-page');
     }, []);
