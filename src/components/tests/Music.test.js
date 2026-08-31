@@ -61,5 +61,9 @@ describe('Music', () => {
         );
         expect(screen.getByText(/producing the electronic elements/i)).toBeInTheDocument();
         expect(screen.getByText(/original electronic music · unreleased/i)).toBeInTheDocument();
+        expect(screen.getByRole('img', { name: /Grace Schallenberger, collaborating artist/i })).toHaveAttribute(
+            'src',
+            '/images/collaborators/grace.png'
+        );
     });
 });
