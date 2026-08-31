@@ -32,6 +32,7 @@ const collaborators = [
     },
     {
         name: 'Grace Schallenberger',
+        image: '/images/collaborators/grace.png',
         status: 'In development',
         palette: 'grace',
         description: 'Developing a handful of original electronic songs together, with hopes of bringing them into the world soon.',
