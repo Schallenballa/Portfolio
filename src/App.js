@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-route
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import AnalyticsConsent from './components/AnalyticsConsent';
 
 const HomePage = lazy(() => import('./components/HomePage'));
 const Music = lazy(() => import('./components/Music'));
@@ -32,7 +33,9 @@ function AppLayout() {
 function App() {
     return (
         <Router>
-            <AppLayout />
+            <AnalyticsConsent>
+                <AppLayout />
+            </AnalyticsConsent>
         </Router>
     );
 }

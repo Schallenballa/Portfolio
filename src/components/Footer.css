@@ -11,13 +11,26 @@
     color: #555;
 }
 
-.footer a {
+.footer a,
+.footer button {
     color: #333;
-    text-decoration: none;
     font-weight: bold;
     margin: 0 10px;
 }
 
-.footer a:hover {
+.footer a {
+    text-decoration: none;
+}
+
+.footer button {
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+}
+
+.footer a:hover,
+.footer button:hover {
     text-decoration: underline;
 }

@@ -68,7 +68,8 @@
 }
 
 .App.music-page-shell .footer p,
-.App.music-page-shell .footer a { color: #aaa3b4; }
+.App.music-page-shell .footer a,
+.App.music-page-shell .footer button { color: #aaa3b4; }
 
 @media (max-width: 768px) {
   .App.music-page-shell {
