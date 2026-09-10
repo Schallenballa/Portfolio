@@ -62,7 +62,8 @@
   },
   "overrides": {
     "nth-check": "^2.0.1",
-    "postcss": "^8.4.31"
+    "postcss": "^8.4.31",
+    "qs": "^6.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.29.6",
