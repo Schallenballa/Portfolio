@@ -47,8 +47,9 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
+      "scripts/**/*.js",
       "!src/**/*.test.{js,jsx}",
-      "!src/index.js",
+      "!scripts/**/*.test.js",
       "!/vanilla-site/**",
       "!/src/assets/icons/*.js"
     ],
@@ -67,6 +68,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
     "@babel/register": "^7.25.9",
