@@ -10,8 +10,13 @@ export function isAnalyticsHost(hostname) {
     return PRODUCTION_HOSTS.has(hostname);
 }
 
-export function initializeGoogleAnalytics() {
-    if (typeof window === 'undefined' || !isAnalyticsHost(window.location.hostname)) {
+export function initializeGoogleAnalytics(hostname) {
+    if (typeof window === 'undefined') {
+        return false;
+    }
+
+    const currentHostname = hostname ?? window.location.hostname;
+    if (!isAnalyticsHost(currentHostname)) {
         return false;
     }
 
