@@ -10,6 +10,109 @@
     padding: 10px 0;
 }
 
+.ford-racing-highlight {
+    margin: 0 0 24px;
+    padding: 20px;
+    text-align: left;
+    background: #f7faff;
+    border: 1px solid #ccd9e9;
+    border-top: 4px solid #003478;
+    border-radius: 12px;
+}
+
+
+.ford-racing-highlight h4 {
+    margin: 0 0 12px;
+    color: #003478;
+    font-size: 1.3rem;
+}
+
+.ford-racing-highlight .ford-racing-summary {
+    margin: 0 0 20px;
+    color: #405269;
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.ford-racing-contributions {
+    margin: 0 0 24px;
+    padding-left: 18px;
+    list-style-type: disc;
+}
+
+.ford-racing-contributions li {
+    padding: 0;
+    color: #405269;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.ford-racing-contributions li + li {
+    margin-top: 12px;
+}
+
+.ford-racing-gallery {
+    display: grid;
+    gap: 20px;
+}
+
+.ford-racing-gallery figure {
+    min-width: 0;
+    margin: 0;
+}
+
+.ford-racing-gallery a {
+    display: block;
+    border-radius: 8px;
+}
+
+.ford-racing-gallery a:focus-visible {
+    outline: 3px solid #003478;
+    outline-offset: 4px;
+}
+
+.ford-racing-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ford-racing-gallery figcaption {
+    display: grid;
+    gap: 4px;
+    margin-top: 10px;
+    color: #405269;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.ford-racing-gallery figcaption strong {
+    color: #003478;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+    .experience-timeline .MuiTimeline-root {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .ford-experience-item .MuiTimelineSeparator-root img {
+        max-width: 48px;
+        height: auto;
+    }
+
+    .ford-experience-item .MuiTimelineContent-root {
+        min-width: 0;
+        padding-right: 0;
+    }
+
+    .ford-racing-highlight {
+        padding: 14px;
+    }
+}
+
 .linkedin-post-card {
     display: block;
     overflow: hidden;

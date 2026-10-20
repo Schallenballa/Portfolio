@@ -18,6 +18,51 @@ import useIsMobile from '../hooks/useIsMobile';
 
 const ExperienceTimeline = () => {
     const isMobile = useIsMobile();
+    const fordRacingHighlight = (
+        <section className="ford-racing-highlight" aria-labelledby="ford-racing-heading">
+            <h4 id="ford-racing-heading">Ford Racing Events</h4>
+            <p className="ford-racing-summary">
+                Supported Ford Racing at Petit Le Mans at Road Atlanta and the IMSA
+                WeatherTech SportsCar Championship GTD Pro race at Laguna Seca.
+            </p>
+            <ul className="ford-racing-contributions">
+                <li>
+                    Supported guest operations for the Raptor Off-Road Experience: helped
+                    guests into vehicles, distributed helmets and merchandise, and encouraged
+                    waiver completion and post-event survey participation.
+                </li>
+                <li>
+                    Engaged Mustang and Raptor owners in the Mustang Owners&apos; Corral,
+                    helping create a welcoming, memorable experience while working directly
+                    with guests, sponsors, and Ford Racing staff.
+                </li>
+                <li>
+                    Assisted with event setup and teardown, including tents and signage;
+                    shuttled guests and provided event-day support as needed.
+                </li>
+            </ul>
+            <div className="ford-racing-gallery">
+                <figure>
+                    <a href="/images/PetitLeMans.JPG" target="_blank" rel="noopener noreferrer"
+                       aria-label="View full photo from Petit Le Mans at Road Atlanta (opens in a new tab)">
+                        <img src="/images/ford-racing-petit-le-mans.jpg"
+                             alt="Zachary Schallenberger wearing Ford Racing apparel at Road Atlanta"
+                             width="900" height="1200" loading="lazy" decoding="async" />
+                    </a>
+                    <figcaption><strong>Petit Le Mans</strong><span>Road Atlanta</span></figcaption>
+                </figure>
+                <figure>
+                    <a href="/images/LagunaSeca.JPG" target="_blank" rel="noopener noreferrer"
+                       aria-label="View full photo from Laguna Seca (opens in a new tab)">
+                        <img src="/images/ford-racing-laguna-seca.jpg"
+                             alt="Ford Racing group with a trophy at the IMSA event at Laguna Seca"
+                             width="1600" height="1067" loading="lazy" decoding="async" />
+                    </a>
+                    <figcaption><strong>Laguna Seca</strong><span>IMSA WeatherTech SportsCar Championship · GTD Pro</span></figcaption>
+                </figure>
+            </div>
+        </section>
+    );
 
     return (
         <section className="experience-timeline">
@@ -28,9 +73,9 @@ const ExperienceTimeline = () => {
                             content: 'none',
                         },
             }}>
-                <TimelineItem>
+                <TimelineItem className="ford-experience-item">
                     {!isMobile && <TimelineOppositeContent
-                        sx={{m: 'auto 0'}}
+                        sx={{m: '24px 0 0'}}
                         align="left"
                         variant="body2"
                         color="text.secondary"
@@ -40,6 +85,7 @@ const ExperienceTimeline = () => {
                             alt="Ford recognition award" width="800" height="602" className="timeline-image"/>
                         <img src={"/images/zach_with_ranger.webp"}
                              alt={"Zach Schallenberger with Ford Ranger Raptor"} width="1284" height="1284" className="timeline-image"/>
+                        {fordRacingHighlight}
                     </TimelineOppositeContent>}
                     <TimelineSeparator>
                         <TimelineDot
@@ -55,6 +101,7 @@ const ExperienceTimeline = () => {
                         <p>January 2022 - Present</p>
                         <p>June 2020 - August 2020 - <em>Internship</em></p>
                         <p>June 2019 - August 2019 - <em>Internship</em></p>
+                        {isMobile && fordRacingHighlight}
                         <ul className={'bullet-list-head'}>
                             <li>Software Engineer for Ford Pro Tech, E-Commerce, and Safety Innovation</li>
                             <li>Design, Develop, and Engineer the web experience for <a

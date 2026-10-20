@@ -13,7 +13,7 @@ describe('HomePage', () => {
         render(<HomePage />);
 
         // Check if the Experience, Education, and Skills components are rendered
-        expect(screen.getByText(/Experience/)).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: 'Experience', level: 2 })).toBeInTheDocument();
         expect(screen.getByText(/Education/)).toBeInTheDocument();
         expect(screen.getByText(/Skills/)).toBeInTheDocument();
     });
